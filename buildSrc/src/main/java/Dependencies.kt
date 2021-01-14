@@ -42,7 +42,7 @@ object Versions {
     const val testRoom = "2.1.0"
     const val testArch = "2.1.0"
 
-    const val buildGradle = "3.6.0"
+    const val buildGradle = "7.0.0-alpha04"
 
     const val detekt = "1.2.2"
     const val ktlint = "0.36.0"
