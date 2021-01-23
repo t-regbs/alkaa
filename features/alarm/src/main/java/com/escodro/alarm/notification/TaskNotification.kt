@@ -97,7 +97,12 @@ internal class TaskNotification(
         }
 
         return PendingIntent
-            .getBroadcast(context, requestCode, receiverIntent, PendingIntent.FLAG_CANCEL_CURRENT)
+            .getBroadcast(
+                context,
+                requestCode,
+                receiverIntent,
+                PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
     }
 
     companion object {

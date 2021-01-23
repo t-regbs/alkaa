@@ -47,7 +47,7 @@ class DatabaseProvider(private val context: Context) {
             }
         }
 
-    private fun getDefaultCategoryList() =
+    internal fun getDefaultCategoryList() =
         listOf(
             Category(
                 name = context.getString(R.string.category_default_personal),

@@ -22,12 +22,15 @@ android {
     }
 
     lintOptions {
+        disable "GradleDependency", "GoogleAppIndexingWarning", "AllowBackup", "ContentDescription",
+                "InvalidPackage", "LabelFor", "Autofill", "ObsoleteLintCustomCheck",
+                "DuplicateStrings", "ConvertToWebp"
         warningsAsErrors true
         abortOnError true
         htmlReport true
         checkDependencies true
 
-        lintConfig file("${rootDir}/config/filters/lint.xml")
+//        lintConfig file("${rootDir}/config/filters/lint.xml")
         htmlOutput file("${buildDir}/reports/lint.html")
     }
 
