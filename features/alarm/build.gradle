@@ -1,8 +1,13 @@
 apply from: "$rootDir/config/dependencies/feature_dependencies.gradle"
+apply from: "$rootDir/config/dependencies/hilt_dependencies.gradle"
 
 android {
     testOptions {
         unitTests.returnDefaultValues = true
+    }
+
+    lintOptions {
+        abortOnError false // Google needs to update their libraries to API Level 10.
     }
 }
 
@@ -12,8 +17,6 @@ dependencies {
 
     implementation Deps.coroutines.core
     implementation Deps.android.navigation.ui
-
-    implementation Deps.koin.core
 
     testImplementation Deps.test.junit
     testImplementation Deps.test.mockk

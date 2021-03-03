@@ -1,5 +1,6 @@
 apply from: "$rootDir/config/dependencies/feature_dependencies.gradle"
 apply from: "$rootDir/config/dependencies/compose_dependencies.gradle"
+apply from: "$rootDir/config/dependencies/hilt_dependencies.gradle"
 
 android {
     testOptions {
@@ -16,9 +17,6 @@ dependencies {
     implementation project(":libraries:core")
     implementation project(":data:domain")
     implementation project(":libraries:theme")
-
-    implementation Deps.koin.viewModel
-    implementation Deps.koin.compose
 
     testImplementation project(":libraries:test")
     androidTestImplementation project(":libraries:test")

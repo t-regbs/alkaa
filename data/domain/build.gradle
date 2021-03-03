@@ -1,11 +1,11 @@
 apply from: "$rootDir/config/dependencies/feature_dependencies.gradle"
+apply from: "$rootDir/config/dependencies/hilt_dependencies.gradle"
 
 dependencies {
     implementation project(":libraries:core")
 
     testImplementation project(':libraries:test')
 
-    implementation Deps.koin.core
     implementation Deps.coroutines.core
 
     testImplementation Deps.test.junit

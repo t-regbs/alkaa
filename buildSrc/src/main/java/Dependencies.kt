@@ -15,12 +15,13 @@ object Versions {
     const val room = "2.2.3"
     const val navigation = "2.3.0"
     const val playCore = "1.6.1"
+    const val viewModelKtx = "2.3.0"
 
     const val coroutines = "1.4.0"
 
     const val timber = "4.7.1"
 
-    const val koin = "2.2.1"
+    const val version = "2.33-beta"
 
     const val testJunit = "4.12"
     const val testRunner = "1.1.1"
@@ -47,7 +48,7 @@ object Deps {
     val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     val android = AndroidDeps
     val coroutines = CoroutinesDeps
-    val koin = KoinDeps
+    val hilt = HiltDeps
     val compose = ComposeDeps
     val test = TestDeps
     val quality = QualityDeps
@@ -59,6 +60,7 @@ object AndroidDeps {
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val ktx = "androidx.core:core-ktx:${Versions.ktx}"
     val playCore = "com.google.android.play:core:${Versions.playCore}"
+    val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewModelKtx}"
     val room = RoomDeps
     val navigation = NavigationDeps
 }
@@ -78,11 +80,11 @@ object NavigationDeps {
     val ui = "androidx.navigation:navigation-ui:${Versions.navigation}"
 }
 
-object KoinDeps {
-    val core = "org.koin:koin-android:${Versions.koin}"
-    val viewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
-    val compose = "org.koin:koin-androidx-compose:${Versions.koin}"
-    val test = "org.koin:koin-test:${Versions.koin}"
+object HiltDeps {
+    const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Versions.version}"
+    const val android = "com.google.dagger:hilt-android:${Versions.version}"
+    const val compiler = "com.google.dagger:hilt-compiler:${Versions.version}"
+    const val testing = "com.google.dagger:hilt-android-testing:${Versions.version}"
 }
 
 object ComposeDeps {

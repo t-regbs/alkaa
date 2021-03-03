@@ -2,9 +2,8 @@ apply plugin: "com.android.application"
 
 apply from: "$rootDir/config/dependencies/android_dependencies.gradle"
 apply from: "$rootDir/config/dependencies/compose_dependencies.gradle"
+apply from: "$rootDir/config/dependencies/hilt_dependencies.gradle"
 apply from: "$rootDir/config/artifacts.gradle"
-
-apply plugin: "kotlin-kapt"
 
 android {
     defaultConfig {
@@ -65,6 +64,5 @@ dependencies {
 
     implementation Deps.compose.navigation
     implementation Deps.android.playCore
-    implementation Deps.koin.core
     implementation Deps.timber
 }
